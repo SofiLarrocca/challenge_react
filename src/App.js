@@ -1,24 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import Home from "./componentes/Home";
+import SearchCharacter from "./componentes/character/SearchCharacter";
+import SearchLocation from "./componentes/location/SearchLocation";
+import SearchEpisode from "./componentes/episode/SearchEpisode";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+   return (
+    <>
+    <BrowserRouter>
+      <Routes>
+          <Route path="/" element = {<Home />} />
+          <Route path='/searchCharacter' element = {<SearchCharacter />} />
+          <Route path='/searchLocation' element = {<SearchLocation />} />
+          <Route path='/searchEpisode' element = {<SearchEpisode />} />
+          <Route path='/searchEpisode/:id' element = {<SearchEpisode />} />
+        </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 

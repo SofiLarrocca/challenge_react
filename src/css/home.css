@@ -1,0 +1,29 @@
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+  background-color: rgba(0, 0, 0, 0.95);
+}
+
+.home-title { 
+    color: #fff;
+}
+
+.container-home { 
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+}
+
+button { 
+    padding: 1.2rem;
+    font-weight: 800;
+    margin: 2rem 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
