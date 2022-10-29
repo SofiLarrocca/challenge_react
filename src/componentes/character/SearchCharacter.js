@@ -13,9 +13,8 @@ const SearchCharacter = () => {
     const renderDataCharacter = async () => {
             const response = await fetch(URL)
             const data = await response.json()
-            // console.log(data)
             setCharacter(data.results)
-    }   
+        }   
    
     
     useEffect( ()=> {

@@ -13,7 +13,6 @@ const SearchEpisode = () => {
     const renderDataEpisode = async () => {
             const response = await fetch(URL)
             const data = await response.json()
-            // console.log(data)
             setCharacter(data.results)
     }   
    
@@ -32,7 +31,6 @@ const SearchEpisode = () => {
         resultado = episode
     } else { 
         resultado = episode.filter((e) => e.episode.find((e)=> e.toUpperCase().includes(search)))
-        console.log(search)
     }
 
       return (
